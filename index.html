@@ -2,7 +2,7 @@
 <!-- saved from url=(0027)http://itzoo.info/love.html -->
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Love</title>
-        
+
         <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
         <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
         <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
@@ -23,8 +23,14 @@
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
-.tab{margin:0; padding:0}
-.tab li{list-style:none}
+.tab{
+margin:0;
+padding:0;
+
+}
+.tab li{
+list-style:none;
+}
 </style>
 <script src="/jquery/jquery-1.11.1.min.js">
 </script>
@@ -36,37 +42,43 @@ jQuery(document).ready(function($) {
   });
 
   $("#btn2").click(function(){
-  var a =  Array("苍井空","波多野结衣", "新垣结衣", "吉泽明步","石原里美", "桥本环奈", "中森明菜","桃谷绘里香", "西野七濑", "明日花绮罗","小泽玛利亚", "麻生希","大桥未久", "冲田杏梨", "花泽香菜","苍井优", "饭岛爱", "绫濑遥","泽尻绘里香", "松岛枫");
+  var a =  Array('从前我只关心面包和清水  遇见你之后我开始在意玫瑰',"I am not happy beca se…", "想陪你度过夏天秋天冬天  想陪你走过晴天阴天雨天  然后你再成为我的春天", "想到你时  脸上便布满了笑 心中便满盈着爱",
+  "夏代有工的玉  此时此刻的云  二十来岁的你",'月亮很亮，亮也没用，没用也亮。   我喜欢你，喜欢也没用，没用也喜欢。','我掀开海浪的被子躺下，注视着月亮的倒影却不抬头，因为不敢直接面对你的眼睛。',
+  '山河已暮，时已寝安。天涯地角有穷时，只是相思无尽处。');
+  if(a_idx >= a.length) alert("	(ﾟДﾟ≡ﾟДﾟ) 什么呀！！！不准拒绝啦！！！快点接受啦 (;´Д`)");
+  if(a_idx < a.length){
   var $i = $("<li>").text(a[a_idx]);
     $("ul").prepend($i);
-    a_idx = a_idx+1;
-    if(a_idx > a.length) alert("我是一个消息框！");
+    $("ul").prepend("<br>");
+    a_idx = a_idx+1;}
   });
 });
 </script>
     </head>
     <body>
         <div id="main">
-            <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
+            <div id="error">您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
             <div id="wrap">
                <div id="text">
-                    <div >
-			<ul class = "tab">    
-                    <li >我的爱人，我会牵着你的手，走到满头白发的那一天，
+                    <div id="code">
+			<ul class = "tab">
+                     <br>
+                    <li>冰冰，我喜欢你！做我女朋友！和我在一起吧！
                   	 </ul>
-                    <button id="btn1" class = "btnTest">yes</button>
-	   <button id="btn2" class = "btnTest">no</button>
+
                     </div>
                 </div>
                 <div >
-                    
-                        <div ></div>
+
+                        <div id = "clock-box">
+                            <button id="btn1" class = "btnTest" onclick="love()">yes</button>
+	                <button id="btn2" class = "btnTest" onclick="love()">no</button></div>
                 </div>
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
-            
+
         </div>
-    
+
     <script>
     </script>
 
@@ -195,23 +207,16 @@ jQuery(document).ready(function($) {
                 tree.ctx.clearRect(0, 0, width, height);
                 tree.jump();
                 foot.draw();
-                $await(Jscex.Async.sleep(25));
+                $await(Jscex.Async.sleep(10));
             }
         }));
 
         var textAnimate = eval(Jscex.compile("async", function () {
-            var together = new Date();
-            together.setFullYear(2010, 5, 8);
-            together.setHours(20);
-            together.setMinutes(20);
-            together.setSeconds(0);
-            together.setMilliseconds(0);
-
             $("#code").show().typewriter();
-            $("#clock-box").fadeIn(500);
+            $("#clock-box").fadeIn(12000);
             while (true) {
                 timeElapse(together);
-                $await(Jscex.Async.sleep(1000));
+                $await(Jscex.Async.sleep(700));
             }
         }));
 
