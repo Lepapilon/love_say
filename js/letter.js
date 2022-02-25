@@ -19,7 +19,7 @@ $("#open").click(function () {
 				content.text + "<br><br><p style='float:right; display:block; width:" + 
 				content.sign + "px;'>^1000" + content.from + "</p>"
 			],
-			typeSpeed: 8,
+			typeSpeed: 5,
 			backSpeed: 10
 		});
 
