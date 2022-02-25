@@ -32,15 +32,16 @@
 var a_idx = 0;
 jQuery(document).ready(function($) {
   $("#btn1").click(function(){
-    $("p").append($i);
+    location.href = "'Letter.html'"
    
   });
 
   $("#btn2").click(function(){
   var a =  Array("苍井空","波多野结衣", "新垣结衣", "吉泽明步","石原里美", "桥本环奈", "中森明菜","桃谷绘里香", "西野七濑", "明日花绮罗","小泽玛利亚", "麻生希","大桥未久", "冲田杏梨", "花泽香菜","苍井优", "饭岛爱", "绫濑遥","泽尻绘里香", "松岛枫");
   var $i = $("<li>").text(a[a_idx]);
-    $("ul").append($i);
-    a_idx = a_idx+1
+    $("ul").prepend($i);
+    a_idx = a_idx+1;
+    if(a_idx > a.length) alert("我是一个消息框！");
   });
 });
 </script>
@@ -50,8 +51,9 @@ jQuery(document).ready(function($) {
             <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
             <div id="wrap">
                <div id="text">
-                    <div id="code">                 
-                    <span class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
+                    <div id="code">
+			<ul class = "tab">    
+                    <li class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
                    <br>
                     <button id="btn1" class = "btnTest">yes</button>
 	   <button id="btn2" class = "btnTest">no</button>
