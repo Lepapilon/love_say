@@ -19,8 +19,8 @@ $("#open").click(function () {
 				content.text + "<br><br><p style='float:right; display:block; width:" + 
 				content.sign + "px;'>^1000" + content.from + "</p>"
 			],
-			typeSpeed: 100,
-			backSpeed: 50
+			typeSpeed: 8,
+			backSpeed: 10
 		});
 
 		$('#open').find("span").eq(0).css('background-position', "0 -150px");
